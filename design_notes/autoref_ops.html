@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Request a design meeting - The Rust Language Design Team</title>
+        <title>Autoderef and autoref in operators - The Rust Language Design Team</title>
                 
 
         <!-- Custom HTML head -->
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item "><a href="../welcome.html"><strong aria-hidden="true">1.</strong> Welcome</a></li><li class="chapter-item "><a href="../initiatives.html"><strong aria-hidden="true">2.</strong> Initiatives</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../initiatives/priorities.html"><strong aria-hidden="true">2.1.</strong> Current priorities</a></li><li class="chapter-item "><a href="../initiatives/process.html"><strong aria-hidden="true">2.2.</strong> Process</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../initiatives/process/roles.html"><strong aria-hidden="true">2.2.1.</strong> Roles</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../initiatives/process/roles/owner.html"><strong aria-hidden="true">2.2.1.1.</strong> Owner</a></li><li class="chapter-item "><a href="../initiatives/process/roles/liaison.html"><strong aria-hidden="true">2.2.1.2.</strong> Liaison</a></li></ol></li><li class="chapter-item "><a href="../initiatives/process/stages.html"><strong aria-hidden="true">2.2.2.</strong> Stages</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../initiatives/process/stages/proposal.html"><strong aria-hidden="true">2.2.2.1.</strong> Proposal</a></li><li class="chapter-item "><a href="../initiatives/process/stages/experimental.html"><strong aria-hidden="true">2.2.2.2.</strong> Experimental</a></li><li class="chapter-item "><a href="../initiatives/process/stages/development.html"><strong aria-hidden="true">2.2.2.3.</strong> Development</a></li><li class="chapter-item "><a href="../initiatives/process/stages/feature_complete.html"><strong aria-hidden="true">2.2.2.4.</strong> Feature complete</a></li><li class="chapter-item "><a href="../initiatives/process/stages/stabilized.html"><strong aria-hidden="true">2.2.2.5.</strong> Stabilized</a></li><li class="chapter-item "><a href="../initiatives/process/stages/inactive.html"><strong aria-hidden="true">2.2.2.6.</strong> Inactive</a></li></ol></li></ol></li><li class="chapter-item "><a href="../initiatives/faq.html"><strong aria-hidden="true">2.3.</strong> FAQ</a></li></ol></li><li class="chapter-item expanded "><a href="../how_to.html"><strong aria-hidden="true">3.</strong> Lang team &quot;how to&quot; guide</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../how_to/nominate.html"><strong aria-hidden="true">3.1.</strong> Nominate an issue</a></li><li class="chapter-item "><a href="../how_to/propose.html"><strong aria-hidden="true">3.2.</strong> Propose an initiative</a></li><li class="chapter-item expanded "><a href="../how_to/design_meeting.html" class="active"><strong aria-hidden="true">3.3.</strong> Request a design meeting</a></li></ol></li><li class="chapter-item "><a href="../chat_platform.html"><strong aria-hidden="true">4.</strong> Chat platform</a></li><li class="chapter-item "><a href="../calendar.html"><strong aria-hidden="true">5.</strong> Calendar</a></li><li class="chapter-item "><a href="../meetings.html"><strong aria-hidden="true">6.</strong> Meetings</a></li><li class="chapter-item "><a href="../design_notes.html"><strong aria-hidden="true">7.</strong> Design notes</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../design_notes/int_literal_as_float.html"><strong aria-hidden="true">7.1.</strong> Allowing integer literals like 1 to be inferred to floating point</a></li><li class="chapter-item "><a href="../design_notes/general_coroutines.html"><strong aria-hidden="true">7.2.</strong> Generalizing coroutines</a></li><li class="chapter-item "><a href="../design_notes/fn_type_trait_impls.html"><strong aria-hidden="true">7.3.</strong> Extending the capabilities of compiler-generated function types</a></li><li class="chapter-item "><a href="../design_notes/auto_traits.html"><strong aria-hidden="true">7.4.</strong> Auto traits</a></li><li class="chapter-item "><a href="../design_notes/eager_drop.html"><strong aria-hidden="true">7.5.</strong> Eager drop</a></li><li class="chapter-item "><a href="../design_notes/autoref_ops.html"><strong aria-hidden="true">7.6.</strong> Autoderef and autoref in operators</a></li></ol></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item "><a href="../welcome.html"><strong aria-hidden="true">1.</strong> Welcome</a></li><li class="chapter-item "><a href="../initiatives.html"><strong aria-hidden="true">2.</strong> Initiatives</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../initiatives/priorities.html"><strong aria-hidden="true">2.1.</strong> Current priorities</a></li><li class="chapter-item "><a href="../initiatives/process.html"><strong aria-hidden="true">2.2.</strong> Process</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../initiatives/process/roles.html"><strong aria-hidden="true">2.2.1.</strong> Roles</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../initiatives/process/roles/owner.html"><strong aria-hidden="true">2.2.1.1.</strong> Owner</a></li><li class="chapter-item "><a href="../initiatives/process/roles/liaison.html"><strong aria-hidden="true">2.2.1.2.</strong> Liaison</a></li></ol></li><li class="chapter-item "><a href="../initiatives/process/stages.html"><strong aria-hidden="true">2.2.2.</strong> Stages</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../initiatives/process/stages/proposal.html"><strong aria-hidden="true">2.2.2.1.</strong> Proposal</a></li><li class="chapter-item "><a href="../initiatives/process/stages/experimental.html"><strong aria-hidden="true">2.2.2.2.</strong> Experimental</a></li><li class="chapter-item "><a href="../initiatives/process/stages/development.html"><strong aria-hidden="true">2.2.2.3.</strong> Development</a></li><li class="chapter-item "><a href="../initiatives/process/stages/feature_complete.html"><strong aria-hidden="true">2.2.2.4.</strong> Feature complete</a></li><li class="chapter-item "><a href="../initiatives/process/stages/stabilized.html"><strong aria-hidden="true">2.2.2.5.</strong> Stabilized</a></li><li class="chapter-item "><a href="../initiatives/process/stages/inactive.html"><strong aria-hidden="true">2.2.2.6.</strong> Inactive</a></li></ol></li></ol></li><li class="chapter-item "><a href="../initiatives/faq.html"><strong aria-hidden="true">2.3.</strong> FAQ</a></li></ol></li><li class="chapter-item "><a href="../how_to.html"><strong aria-hidden="true">3.</strong> Lang team &quot;how to&quot; guide</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../how_to/nominate.html"><strong aria-hidden="true">3.1.</strong> Nominate an issue</a></li><li class="chapter-item "><a href="../how_to/propose.html"><strong aria-hidden="true">3.2.</strong> Propose an initiative</a></li><li class="chapter-item "><a href="../how_to/design_meeting.html"><strong aria-hidden="true">3.3.</strong> Request a design meeting</a></li></ol></li><li class="chapter-item "><a href="../chat_platform.html"><strong aria-hidden="true">4.</strong> Chat platform</a></li><li class="chapter-item "><a href="../calendar.html"><strong aria-hidden="true">5.</strong> Calendar</a></li><li class="chapter-item "><a href="../meetings.html"><strong aria-hidden="true">6.</strong> Meetings</a></li><li class="chapter-item expanded "><a href="../design_notes.html"><strong aria-hidden="true">7.</strong> Design notes</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../design_notes/int_literal_as_float.html"><strong aria-hidden="true">7.1.</strong> Allowing integer literals like 1 to be inferred to floating point</a></li><li class="chapter-item "><a href="../design_notes/general_coroutines.html"><strong aria-hidden="true">7.2.</strong> Generalizing coroutines</a></li><li class="chapter-item "><a href="../design_notes/fn_type_trait_impls.html"><strong aria-hidden="true">7.3.</strong> Extending the capabilities of compiler-generated function types</a></li><li class="chapter-item "><a href="../design_notes/auto_traits.html"><strong aria-hidden="true">7.4.</strong> Auto traits</a></li><li class="chapter-item "><a href="../design_notes/eager_drop.html"><strong aria-hidden="true">7.5.</strong> Eager drop</a></li><li class="chapter-item expanded "><a href="../design_notes/autoref_ops.html" class="active"><strong aria-hidden="true">7.6.</strong> Autoderef and autoref in operators</a></li></ol></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -143,28 +143,61 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="proposing-a-topic-for-a-design-meeting"><a class="header" href="#proposing-a-topic-for-a-design-meeting">Proposing a topic for a design meeting</a></h1>
-<p>You can propose a topic for a design meeting by opening an <a href="https://github.com/rust-lang/lang-team/issues/new/choose">Design
-meeting proposal</a> issue on the lang-team repository. We schedule meetings in our monthly
-planning meeting.</p>
-<p>Every design meeting begins by reading a document and leaving comments. That document
-must be prepared 24 hours in advance of the design meeting and posted on the issue.
-If you propose an issue, you should be willing to prepare that document, or else indicate
-who will do the preparation.</p>
-<p>Typically, design meetings are associated with active initiatives: you may wish to
-<a href="./propose.html">propose an initiative</a> instead.</p>
+                        <h1 id="autorefautoderef-in-operators"><a class="header" href="#autorefautoderef-in-operators">Autoref/Autoderef in operators</a></h1>
+<p>Rust permits overriding most of the operators (e.g., <code>+</code>, <code>-</code>, <code>+=</code>). In part
+due to <code>Copy</code> types not auto-dereferencing, it is common to have <code>T + &amp;T</code>
+or <code>&amp;T + &amp;T</code>, with potentially many levels of indirection on either side of the
+operator.</p>
+<p>There is desire in general to avoid needing to both add impls for referenced
+versions of types because they:</p>
+<ul>
+<li>bloat documentation</li>
+<li>are never quite sufficient (always more references are possible)</li>
+<li>can cause inference regressions, as the compiler cannot in general know that
+<code>&amp;T + &amp;T</code> is essentially equivalent at runtime to <code>T + T</code>.</li>
+</ul>
+<p>The inference regressions are the primary target of historical discussions.</p>
+<p>The tradeoff to some feature like this may either mean that the exact impl
+executed at runtime is harder to determine, or that the compiler is
+synthetically generating new implementations for some subset of types,
+potentially adding confusion around which impls are actually present.</p>
+<p>However, generic code may want the impls on references because the generic code
+may not want to require <code>T: Copy</code>. One version of this could involve
+something like <code>default impl&lt;T:Copy&gt; Add&lt;&amp;T&gt; for &amp;T</code> so that people don't <em>need</em>
+to write special impls themselves. It's worth noting that this still would need
+some special support in the compiler to avoid the two possible impls leading to
+inference regressions.</p>
+<h2 id="history"><a class="header" href="#history">History</a></h2>
+<p>The standard library initially had just the basic impls of the operator traits
+(e.g., <code>impl Add&lt;u64&gt; for u64</code>) but has since gained <code>&amp;u64 + &amp;u64</code>, <code>u64 + &amp;u64</code>
+and <code>&amp;u64 + u64</code>. These impls usually cause some amount of inference breakage in
+practice.</p>
+<p>Especially with non-Copy types (for example bigints), forcing users to add references can be
+increasingly verbose: <code>&amp;u * &amp;(&amp;(&amp;u.square() + &amp;(&amp;a * &amp;u)) + &amp;one)</code>, for example.</p>
+<p>There have also been a number of discussions on RFCs and issues, including:</p>
+<ul>
+<li><a href="https://github.com/rust-lang/rust/issues/44762">Rust tracking issue #44762</a>
+<ul>
+<li>This includes some implementation/mentoring notes.</li>
+</ul>
+</li>
+<li><a href="https://github.com/rust-lang/rfcs/pull/2147">RFC 2147</a></li>
+<li><a href="https://github.com/rust-lang/rust/pull/41336">Trying to add T op= &amp;T</a>
+<ul>
+<li>Showcases dealing with inference breakage regressions when adding new
+reference-taking impls.</li>
+</ul>
+</li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                                                    <a rel="prev" href="../how_to/propose.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                                    <a rel="prev" href="../design_notes/eager_drop.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
-                                                    <a rel="next" href="../chat_platform.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
                         
                         <div style="clear: both"></div>
                     </nav>
@@ -172,13 +205,10 @@ who will do the preparation.</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                                    <a rel="prev" href="../how_to/propose.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                    <a rel="prev" href="../design_notes/eager_drop.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
-                                    <a rel="next" href="../chat_platform.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
                             </nav>
 
         </div>
