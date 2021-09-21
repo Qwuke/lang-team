@@ -153,17 +153,45 @@ construction here).</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="initiatives"><a class="header" href="#initiatives">Initiatives</a></h1>
 <p>A lang team <strong>initiative</strong> is some active effort with a clear goal or deliverable.
 Typically initiatives are changes to the language, but they could also be documentation, specifications, or something internal to the lang team.</p>
+<h2 id="active-initiatives"><a class="header" href="#active-initiatives">Active initiatives</a></h2>
+<p>The following is a list of <strong>active lang-team initiatives</strong>. Each initiative has a link to a repository
+or tracking issue that goes into details on its current state, along with an <a href="./initiaives/roles/owner.html">owner</a> and a <a href="./initiaives/roles/liaison.html">liaison</a>.</p>
+<p>Key:</p>
+<ul>
+<li>🛑 -- Blocked (link to an issue)</li>
+<li>⏳ -- Paused</li>
+<li>🔬 -- Under active research</li>
+<li>💻 -- Under active deveopment</li>
+<li>🚀 -- Feature complete and seeking feedback</li>
+<li>✅ -- Stable</li>
+</ul>
+<table><thead><tr><th>Initiative</th><th></th><th><a href="./initiaives/process/stages.html">Stage</a></th><th><a href="./initiaives/roles/owner.html">Owner</a></th><th><a href="./initiaives/roles/liaison.html">Liaison</a></th></tr></thead><tbody>
+<tr><td><a href="https://github.com/rust-lang/impl-trait-initiative">Impl Trait</a></td><td></td><td></td><td>nikomatsakis</td><td>?</td></tr>
+<tr><td>↳ Type Alias Impl Trait</td><td>💻</td><td><a href="./initiatives/process/stages/development.html">▰▰▰▱▱</a></td><td>oli-obk</td><td>nikomatsakis</td></tr>
+<tr><td><a href="https://github.com/nikomatsakis/generic-associated-types-initiative/">Generic Associated Types</a></td><td>💻</td><td><a href="./initiatives/process/stages/development.html">▰▰▰▱▱</a></td><td>jackh726</td><td>nikomatsakis</td></tr>
+<tr><td><a href="https://github.com/rust-lang/rust/issues/87335">let-else</a></td><td>💻</td><td><a href="./initiatives/process/stages/development.html">▰▰▰▱▱</a></td><td>fishrock</td><td>JoshTriplett</td></tr>
+<tr><td><a href="https://rust-lang.github.io/wg-async-foundations/">Async Foundations</a></td><td></td><td></td><td>tmandry</td><td>nikomatsakis</td></tr>
+<tr><td>↳ <a href="https://rust-lang.github.io/async-fundamentals-initiative/">Async fundamentals</a></td><td>🔬</td><td><a href="./initiatives/process/stages/proposal.html">▱▱▱▱▱</a></td><td>tmandry</td><td>nikomatsakis</td></tr>
+<tr><td>Never type</td><td>🔬</td><td><a href="./initiatives/process/stages/experimental.html">▰▰▱▱▱</a></td><td>mark-simulacrum</td><td>nikomatsakis</td></tr>
+<tr><td><a href="https://github.com/rust-lang/project-inline-asm">Inline assembly</a></td><td></td><td></td><td>Amanieu</td><td>JoshTriplett</td></tr>
+<tr><td>↳ Core feature</td><td>🚀</td><td><a href="./initiatives/process/stages/feature_complete.html">▰▰▰▰▱</a></td><td>Amanieu</td><td>JoshTriplett</td></tr>
+<tr><td>↳ Const support</td><td><a href="https://github.com/rust-lang/rust/issues/76001">🛑</a></td><td><a href="./initiatives/process/stages/experimental.html">▰▰▱▱▱</a></td><td></td><td></td></tr>
+<tr><td><a href="https://github.com/rust-lang/dyn-upcasting-coercion-initiative">Dyn upcasting</a></td><td>💻</td><td><a href="./initiatives/process/stages/development.html">▰▰▰▱▱</a></td><td>crlf0710</td><td>nikomatsakis</td></tr>
+<tr><td>Negative traits in coherence</td><td></td><td><a href="./initiatives/process/stages/proposal.html">▱▱▱▱▱</a></td><td>jane lusby</td><td>nikomatsakis</td></tr>
+<tr><td><a href="https://github.com/rust-lang/project-ffi-unwind/">FFI Unwind</a></td><td></td><td></td><td>BatmanAod</td><td>nikomatsakis</td></tr>
+<tr><td>↳ extern &quot;C-unwind&quot;</td><td>🚀</td><td><a href="./initiatives/process/stages/feature_complete.html">▰▰▰▰▱</a></td><td>BatmanAod</td><td>nikomatsakis</td></tr>
+<tr><td>↳ longjmp</td><td>⏳</td><td><a href="./initiatives/process/stages/experimental.html">▰▰▱▱▱</a></td><td>BatmanAod</td><td>nikomatsakis</td></tr>
+<tr><td><a href="https://github.com/rust-lang/project-rfc-2229/">Disjoint closure capture</a></td><td>🚀</td><td><a href="./initiatives/process/stages/feature_complete.html">▰▰▰▰▱</a></td><td>nikomatsakis</td><td>TBD</td></tr>
+<tr><td>Try and generalized <code>?</code></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>↳ <code>?</code> operator</td><td>✅</td><td><a href="./initiatives/process/stages/stabilized.html">▰▰▰▰▰</a></td><td></td><td></td></tr>
+<tr><td>↳ <a href="https://github.com/rust-lang/rust/issues/42327"><code>Try</code> trait</a></td><td>🚀</td><td><a href="./initiatives/process/stages/feature_complete.html">▰▰▰▰▱</a></td><td>scottmcm</td><td>?</td></tr>
+<tr><td>↳ <code>try</code> blocks</td><td>⏳</td><td><a href="./initiatives/process/stages/development.html">▰▰▰▱▱</a></td><td>scottmcm</td><td></td></tr>
+</tbody></table>
+<p>Note that this list doesn't represent the complete set of unstable features. We are currently in the process of transitioning into
+the initiative system, so there are a number of RFCs that have been accepted (and even implemented!) which don't
+have an active initiative.</p>
 <h2 id="proposed-initiatives"><a class="header" href="#proposed-initiatives">Proposed initiatives</a></h2>
 <p>You can see the <a href="https://github.com/rust-lang/lang-team/issues?q=is%3Aissue+is%3Aopen+label%3Amajor-change">currently proposed initiatives</a> on Github.</p>
-<h2 id="active-initiatives"><a class="header" href="#active-initiatives">Active initiatives</a></h2>
-<p>You can see the active initiatives, and their state, on the lang team <a href="https://github.com/rust-lang/lang-team/projects/2">project board</a>.</p>
-<h3 id="learning-more-about-an-active-initiative"><a class="header" href="#learning-more-about-an-active-initiative">Learning more about an active initiative</a></h3>
-<p>Each initiative has a tracking issue that describes its state in more detail along with regular updates. The tracking issue also identifies two key people for the intiative:</p>
-<ul>
-<li>The <a href="initiatives/roles/owner.html">owner</a>, who drives the design.</li>
-<li>The <a href="initiatives/roles/liaison.html">liaison</a>, who synchronizes with the lang team and helps resolve thorny questions.</li>
-</ul>
-<p>If you have questions, the issue also identifies the <a href="./chat_platform.html">Zulip</a> stream where conversation is taking place. If you look at the comments of the issue, you may also find requests for help or other forms of participation.</p>
 <h2 id="how-does-one-propose-a-new-initiative"><a class="header" href="#how-does-one-propose-a-new-initiative">How does one propose a new initiative?</a></h2>
 <p>Read more in the <a href="./initiatives/process.html">process</a> page!</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="priorities"><a class="header" href="#priorities">Priorities</a></h1>
