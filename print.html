@@ -262,10 +262,10 @@ might reach out to if you wish to discuss a project proposal.</p>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="stabilized-initiatives"><a class="header" href="#stabilized-initiatives">Stabilized initiatives</a></h1>
 <p>This table lists past initiatives which were stabilized.</p>
-<table><thead><tr><th>Initiative</th><th></th><th><a href="initiatives/./process/stages.html">Stage</a></th><th><a href="initiatives/./process/roles/owner.html">Owner</a></th><th><a href="initiatives/./process/roles/liaison.html">Liaison</a></th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Initiative</th><th></th><th><a href="initiatives/./process/stages.html">Stage</a></th><th><a href="initiatives/./process/roles/owner.html">Owner</a></th><th><a href="initiatives/./process/roles/liaison.html">Liaison</a></th></tr></thead><tbody>
 <tr><td><a href="https://github.com/rust-lang/project-rfc-2229/">Disjoint closure capture</a></td><td>✅</td><td><a href="initiatives/./process/stages/stabilized.html">▰▰▰▰▰</a></td><td>nikomatsakis</td><td></td></tr>
 </tbody></table>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="process"><a class="header" href="#process">Process</a></h1>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="process"><a class="header" href="#process">Process</a></h1>
 <p>This page describes how lang team initiatives work. This is the process to use if you have an idea for a change you would like to make in the language.</p>
 <h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
 <p>In a nutshell, the process for a successful initiative is as follows:</p>
@@ -406,13 +406,14 @@ might reach out to if you wish to discuss a project proposal.</p>
 <p>15-30 minutes per week (regular sync meeting) and the occasional deep dive. If the liaison is spending much more time than this, then they may in fact be playing the role of owner, and that is a problem.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="stages-of-an-initiative"><a class="header" href="#stages-of-an-initiative">Stages of an initiative</a></h1>
 <p>Presuming that an initiative continues successfully, it will go through the following stages:</p>
-<table><thead><tr><th>Phase</th><th>Goal</th><th>Permits</th><th>Successful exit</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Phase</th><th>Goal</th><th>Permits</th><th>Successful exit</th></tr></thead><tbody>
 <tr><td><a href="initiatives/process/./stages/proposal.html">Proposal</a></td><td>Find a team <a href="initiatives/process/./roles/liaison.html">liaison</a></td><td>Discussion</td><td>Team member seconds, thereby agreeing to act as <a href="initiatives/process/./roles/liaison.html">liaison</a></td></tr>
 <tr><td><a href="initiatives/process/./stages/experimental.html">Experimental</a><br>(sometimes skipped)</td><td>Refine the design and work towards an RFC</td><td>Active zulip stream; tracking issue / repository; code can land under &quot;unstable&quot; feature gate</td><td>RFC is approved by team</td></tr>
 <tr><td><a href="initiatives/process/./stages/development.html">Development</a></td><td>Finalize design and implementation</td><td>Removing the &quot;experimental&quot; tag on a feature</td><td>Liaison declares the proposal feature complete</td></tr>
 <tr><td><a href="initiatives/process/./stages/feature_complete.html">Feature complete</a></td><td>Gathering feedback</td><td>Advertisting the initiative as &quot;feature complete&quot;</td><td>Stabilization proposal approved</td></tr>
 <tr><td><a href="initiatives/process/./stages/stabilized.html">Stabilized</a></td><td></td><td>Use on stable branch</td><td>(none)</td></tr>
 </tbody></table>
+</div>
 <p>The &quot;experimental&quot; stage can be skipped if the initiative is sufficiently simple that a RFC doesn't seem necessary; see <a href="initiatives/process/stages.html#simple-initiatives">&quot;simple initiatives&quot;</a> below.</p>
 <p>Initiatives can also become <a href="initiatives/process/./stages/inactive.html">inactive</a> for a variety of reasons.</p>
 <h2 id="simple-initiatives"><a class="header" href="#simple-initiatives">Simple initiatives</a></h2>
@@ -732,13 +733,13 @@ following:</p>
 which means that it will be affirmed once the &quot;final comment period&quot; of 10
 days have passed, unless a team member places a &quot;hold&quot; on the decision (or
 cancels it).</p>
-<table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
 <tr><td>@Alan</td><td><strong>merge</strong></td></tr>
 <tr><td>@Barbara</td><td></td></tr>
 <tr><td>@Grace</td><td></td></tr>
 <tr><td>@Niklaus</td><td></td></tr>
 </tbody></table>
-</blockquote>
+</div></blockquote>
 <p>As the comment says, the PR is now in &quot;pending decision&quot; state, with Alan
 having kicked off the process with a proposal to merge. Alan's status of
 <strong>merge</strong> will link to his comment.</p>
@@ -754,13 +755,13 @@ proposal has overlooked an important consideration. She writes a comment:</p>
 <p>Hello! @Alan has proposed to merge this. This is a <strong>reversible decision</strong>,
 which means that it will be affirmed once the &quot;final comment period&quot; of 10
 days have passed, unless a team member places a &quot;hold&quot; on the decision (or cancels it).</p>
-<table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
 <tr><td>@Alan</td><td><strong>merge</strong></td></tr>
 <tr><td>@Barbara</td><td><strong>hold</strong></td></tr>
 <tr><td>@Grace</td><td></td></tr>
 <tr><td>@Niklaus</td><td></td></tr>
 </tbody></table>
-</blockquote>
+</div></blockquote>
 <p>Alan is currently busy at work, though, so by the time that he and Barbara
 get a chance to talk, 11 days have passed. (Alan and Barbara receive a ping
 from rustbot after a week or so.) Once they get a chance to talk, Alan
@@ -773,13 +774,13 @@ fully addresses Barbara's concern, so Barbara posts:</p>
 <p>Hello! @Alan has proposed to merge this. This is a <strong>reversible decision</strong>,
 which means that it will be affirmed once the &quot;final comment period&quot; of 10
 days have passed, unless a team member places a &quot;hold&quot; on the decision (or cancels it).</p>
-<table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
 <tr><td>@Alan</td><td><strong>merge</strong></td></tr>
 <tr><td>@Barbara</td><td><del>hold</del> <strong>merge</strong></td></tr>
 <tr><td>@Grace</td><td></td></tr>
 <tr><td>@Niklaus</td><td></td></tr>
 </tbody></table>
-</blockquote>
+</div></blockquote>
 <p>Barbara's previous <del>hold</del> status links to her previous comment setting her
 status to <code>hold</code>, and her current <strong>merge</strong> status links to her more recent
 comment setting her status to <code>merge</code>.</p>
@@ -806,13 +807,13 @@ the interim, Barbara decides she agrees with the RFC, so she uses <code>@rustbot
 decision</strong>, which means that it will be affirmed once the &quot;final comment
 period&quot; of 10 days have passed, unless a team member places a &quot;hold&quot; on the decision (or cancels it).
 decision.</p>
-<table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
 <tr><td>@Alan</td><td><strong>merge</strong></td></tr>
 <tr><td>@Barbara</td><td><strong>merge</strong></td></tr>
 <tr><td>@Grace</td><td></td></tr>
 <tr><td>@Niklaus</td><td><strong>hold</strong></td></tr>
 </tbody></table>
-</blockquote>
+</div></blockquote>
 <p>Eventually, Alan and Niklaus find a time to discuss, and Alan agrees that
 Niklaus's concerns are valid, so he makes some major edits to the RFC. Given
 that the RFC is completely different, he decides to restart the clock and
@@ -831,13 +832,13 @@ rustbot also pings the relevant team members:</p>
 <p>Hello! @Alan has proposed to merge this. This is a <strong>reversible decision</strong>,
 which means that it will be affirmed once the &quot;final comment period&quot; of 10
 days have passed, unless a team member places a &quot;hold&quot; on the decision (or cancels it).</p>
-<table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
 <tr><td>@Alan</td><td><strong>merge</strong></td></tr>
 <tr><td>@Barbara</td><td><del>merge</del></td></tr>
 <tr><td>@Grace</td><td></td></tr>
 <tr><td>@Niklaus</td><td><del>hold</del></td></tr>
 </tbody></table>
-</blockquote>
+</div></blockquote>
 <p>Barbara can use <code>@rustbot merge</code> to re-affirm her <strong>merge</strong> status, and Niklaus
 can use <code>@rustbot merge</code> to set his own status to <strong>merge</strong> since he agrees
 with the resolution of his concern.</p>
@@ -854,13 +855,13 @@ adverse effect on the ecosystem...</p>
 <p>Hello! @Alan has proposed to merge this. This is a <strong>reversible decision</strong>,
 which means that it will be affirmed once the &quot;final comment period&quot; of 10
 days have passed, unless a team member places a &quot;hold&quot; on the decision (or cancels it).</p>
-<table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
 <tr><td>@Alan</td><td><strong>merge</strong></td></tr>
 <tr><td>@Barbara</td><td><del>merge</del> <strong>merge</strong></td></tr>
 <tr><td>@Grace</td><td><strong>hold</strong></td></tr>
 <tr><td>@Niklaus</td><td><del>hold</del> <strong>merge</strong></td></tr>
 </tbody></table>
-</blockquote>
+</div></blockquote>
 <p>Niklaus reads this message. He feels he understands the concern well, and
 agrees that this point hasn't yet been considered:</p>
 <blockquote>
@@ -895,13 +896,13 @@ move forward:</p>
 <p>Hello! @Alan has proposed to merge this. This is a <strong>reversible decision</strong>,
 which means that it will be affirmed once the &quot;final comment period&quot; of 10
 days have passed, unless a team member places a &quot;hold&quot; on the decision (or cancels it).</p>
-<table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
 <tr><td>@Alan</td><td><strong>merge</strong></td></tr>
 <tr><td>@Barbara</td><td><del>merge</del> <strong>merge</strong></td></tr>
 <tr><td>@Grace</td><td><strong>hold</strong></td></tr>
 <tr><td>@Niklaus</td><td><del>hold</del> <del>merge</del> <del>hold</del> <strong>merge</strong></td></tr>
 </tbody></table>
-</blockquote>
+</div></blockquote>
 <p>(We'll assume, for this example, that Grace does not manage to convince anyone
 else.)</p>
 <p>Grace takes some time, working with the RFC author, to add a dissent, including
@@ -913,13 +914,13 @@ her behalf.) The status now looks like this:</p>
 <p>Hello! @Alan has proposed to merge this. This is a <strong>reversible decision</strong>,
 which means that it will be affirmed once the &quot;final comment period&quot; of 10
 days have passed, unless a team member places a &quot;hold&quot; on the decision (or cancels it).</p>
-<table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
 <tr><td>@Alan</td><td><strong>merge</strong></td></tr>
 <tr><td>@Barbara</td><td><del>merge</del> <strong>merge</strong></td></tr>
 <tr><td>@Grace</td><td><del>hold</del> <strong>dissent</strong></td></tr>
 <tr><td>@Niklaus</td><td><del>hold</del> <del>merge</del> <del>hold</del> <strong>merge</strong></td></tr>
 </tbody></table>
-</blockquote>
+</div></blockquote>
 <p>Since all statuses are now either <strong>merge</strong> or <strong>dissent</strong> rustbot also posts a
 comment:</p>
 <blockquote>
@@ -939,13 +940,13 @@ template is a bit different:</p>
 <p>Hello! @Alan has proposed to stabilize this. This is a <strong>irreversible
 decision</strong>, which means that it will be affirmed once all members come to a
 consensus and the &quot;final comment period&quot; of 10 days has passed.</p>
-<table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
 <tr><td>@Alan</td><td>stabilize</td></tr>
 <tr><td>@Barbara</td><td></td></tr>
 <tr><td>@Grace</td><td></td></tr>
 <tr><td>@Niklaus</td><td></td></tr>
 </tbody></table>
-</blockquote>
+</div></blockquote>
 <p>This time, Barbara, Grace, and Niklaus must all explicitly provide a status
 before the decision can proceed. One by one, they join the PR. They must
 individually set their state using one of the rustbot commands.</p>
@@ -2081,8 +2082,7 @@ code. These have been discussed at length in the following places.</p>
 <p>In this example, we are building a crate which provies a safe wrapper around
 an underlying C API. The C API contains at least one function which accepts
 a function pointer to be used as a callback:</p>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>mod c_api {
     extern {
@@ -2099,8 +2099,7 @@ the C API, by wrapping it in a call to <code>catch_unwind</code>. Unfortunately,
 offers no way to pass an additional &quot;custom data&quot; field that we could use to
 store the original function pointer.</p>
 <p>Instead, we could write a generic function like this:</p>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>use std::{panic, process};
 
@@ -2135,8 +2134,7 @@ fn main() {
 <h2 id="implementing-the-default-trait"><a class="header" href="#implementing-the-default-trait">Implementing the <code>Default</code> trait</a></h2>
 <p>The solution initially proposed was to implement <code>Default</code> for function types
 without upvars. Safe trampolines would be written like so:</p>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>fn add_one_adapter&lt;F: Fn(i32) + Default&gt;(arg: i32) {
     let f = F::default();
@@ -2149,8 +2147,7 @@ without upvars. Safe trampolines would be written like so:</p>
 <p>Unlike <code>Clone</code>, it intuitively does not make sense for a closure to implement
 <code>Default</code> just because its upvars are themselves <code>Default</code>. A closure like
 the following might not expect to ever observe an ID of zero:</p>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>fn do_thing() -&gt; impl FnOnce() {
     let id: i32 = generate_id();
@@ -2296,8 +2293,7 @@ to the <code>FnStatic::call_static</code> function, which makes this very elegan
 <h3 id="example-1"><a class="header" href="#example-1">Example</a></h3>
 <p>With this trait, we can implement <code>call_me_back_safely</code> from the prior example
 like this:</p>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>use std::{panic, process};
 
@@ -2317,8 +2313,7 @@ pub fn call_me_back_safely&lt;F: FnStatic()&gt;(_f: F) {
 <p>Initially proposed by @scalexm, this solution uses the existing implicit
 conversion from function types to function pointers, but in a const-eval
 context:</p>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>fn add_one_adapter&lt;const F: fn(i32)&gt;(arg: i32) {
     F(arg + 1);
@@ -2381,8 +2376,7 @@ currently unlikely.</p>
 <h2 id="observations"><a class="header" href="#observations">Observations</a></h2>
 <h3 id="any-attempt-to-make-drop-run-more-eagerly-will-have-to-take-borrows-into-account"><a class="header" href="#any-attempt-to-make-drop-run-more-eagerly-will-have-to-take-borrows-into-account">Any attempt to make drop run more eagerly will have to take borrows into account</a></h3>
 <p>The original proposal was to use &quot;CFG dead&quot; as a criteria, but it's pretty clear that this will not work well. Example:</p>
-<pre><pre class="playground"><code class="language-rust=">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust="><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>{
     let x = String::new();
@@ -2413,8 +2407,7 @@ currently unlikely.</p>
 <li><code>let _guard = foo()</code> -- moves <code>foo()</code> into <code>_guard</code> and drops at the end of the block</li>
 </ul>
 <p>Another common source of confusion is the lifetimes of temporaries in <code>match</code> statements and the like:</p>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>match foo.lock().data.copy_out() {
     ...
@@ -2529,8 +2522,7 @@ currently being overeager with the defaults in some contexts.</p>
 desirable but is error-prone given the <code>Iterator/IntoIterator</code> impls on ranges.</p>
 <p>The example here does not compile today (since Range is not Copy), but would be
 unintuitive if it did.</p>
-<pre><pre class="playground"><code class="language-rust compile_fail">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust compile_fail"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>let mut x = 0..10;
 let mut c = move || x.next();
@@ -2556,8 +2548,7 @@ taking ownership as well), so a size-based lint is plausibly desirable for both.
 <p>Frequently when dealing with code generic over T you end up needing things like
 <code>[u8]::contains(&amp;5)</code> which is ugly and annoying. Iterators of copy types also
 produce <code>&amp;&amp;u64</code> and similar constructs which can produce unexpected type errors.</p>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>for x in &amp;vec![1, 2, 3, 4, 5, 6, 7] {
     process(*x); // &lt;-- annoying that we need `*x`
@@ -2566,8 +2557,7 @@ produce <code>&amp;&amp;u64</code> and similar constructs which can produce unex
 fn process(x: i32) { }
 <span class="boring">}
 </span></code></pre></pre>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>fn sum_even(v: &amp;[u32]) -&gt; u32 {
     // **v is annoying

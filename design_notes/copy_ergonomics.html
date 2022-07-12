@@ -175,8 +175,7 @@ currently being overeager with the defaults in some contexts.</p>
 desirable but is error-prone given the <code>Iterator/IntoIterator</code> impls on ranges.</p>
 <p>The example here does not compile today (since Range is not Copy), but would be
 unintuitive if it did.</p>
-<pre><pre class="playground"><code class="language-rust compile_fail">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust compile_fail"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>let mut x = 0..10;
 let mut c = move || x.next();
@@ -202,8 +201,7 @@ taking ownership as well), so a size-based lint is plausibly desirable for both.
 <p>Frequently when dealing with code generic over T you end up needing things like
 <code>[u8]::contains(&amp;5)</code> which is ugly and annoying. Iterators of copy types also
 produce <code>&amp;&amp;u64</code> and similar constructs which can produce unexpected type errors.</p>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>for x in &amp;vec![1, 2, 3, 4, 5, 6, 7] {
     process(*x); // &lt;-- annoying that we need `*x`
@@ -212,8 +210,7 @@ produce <code>&amp;&amp;u64</code> and similar constructs which can produce unex
 fn process(x: i32) { }
 <span class="boring">}
 </span></code></pre></pre>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>fn sum_even(v: &amp;[u32]) -&gt; u32 {
     // **v is annoying

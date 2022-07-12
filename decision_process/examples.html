@@ -152,13 +152,13 @@ following:</p>
 which means that it will be affirmed once the &quot;final comment period&quot; of 10
 days have passed, unless a team member places a &quot;hold&quot; on the decision (or
 cancels it).</p>
-<table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
 <tr><td>@Alan</td><td><strong>merge</strong></td></tr>
 <tr><td>@Barbara</td><td></td></tr>
 <tr><td>@Grace</td><td></td></tr>
 <tr><td>@Niklaus</td><td></td></tr>
 </tbody></table>
-</blockquote>
+</div></blockquote>
 <p>As the comment says, the PR is now in &quot;pending decision&quot; state, with Alan
 having kicked off the process with a proposal to merge. Alan's status of
 <strong>merge</strong> will link to his comment.</p>
@@ -174,13 +174,13 @@ proposal has overlooked an important consideration. She writes a comment:</p>
 <p>Hello! @Alan has proposed to merge this. This is a <strong>reversible decision</strong>,
 which means that it will be affirmed once the &quot;final comment period&quot; of 10
 days have passed, unless a team member places a &quot;hold&quot; on the decision (or cancels it).</p>
-<table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
 <tr><td>@Alan</td><td><strong>merge</strong></td></tr>
 <tr><td>@Barbara</td><td><strong>hold</strong></td></tr>
 <tr><td>@Grace</td><td></td></tr>
 <tr><td>@Niklaus</td><td></td></tr>
 </tbody></table>
-</blockquote>
+</div></blockquote>
 <p>Alan is currently busy at work, though, so by the time that he and Barbara
 get a chance to talk, 11 days have passed. (Alan and Barbara receive a ping
 from rustbot after a week or so.) Once they get a chance to talk, Alan
@@ -193,13 +193,13 @@ fully addresses Barbara's concern, so Barbara posts:</p>
 <p>Hello! @Alan has proposed to merge this. This is a <strong>reversible decision</strong>,
 which means that it will be affirmed once the &quot;final comment period&quot; of 10
 days have passed, unless a team member places a &quot;hold&quot; on the decision (or cancels it).</p>
-<table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
 <tr><td>@Alan</td><td><strong>merge</strong></td></tr>
 <tr><td>@Barbara</td><td><del>hold</del> <strong>merge</strong></td></tr>
 <tr><td>@Grace</td><td></td></tr>
 <tr><td>@Niklaus</td><td></td></tr>
 </tbody></table>
-</blockquote>
+</div></blockquote>
 <p>Barbara's previous <del>hold</del> status links to her previous comment setting her
 status to <code>hold</code>, and her current <strong>merge</strong> status links to her more recent
 comment setting her status to <code>merge</code>.</p>
@@ -226,13 +226,13 @@ the interim, Barbara decides she agrees with the RFC, so she uses <code>@rustbot
 decision</strong>, which means that it will be affirmed once the &quot;final comment
 period&quot; of 10 days have passed, unless a team member places a &quot;hold&quot; on the decision (or cancels it).
 decision.</p>
-<table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
 <tr><td>@Alan</td><td><strong>merge</strong></td></tr>
 <tr><td>@Barbara</td><td><strong>merge</strong></td></tr>
 <tr><td>@Grace</td><td></td></tr>
 <tr><td>@Niklaus</td><td><strong>hold</strong></td></tr>
 </tbody></table>
-</blockquote>
+</div></blockquote>
 <p>Eventually, Alan and Niklaus find a time to discuss, and Alan agrees that
 Niklaus's concerns are valid, so he makes some major edits to the RFC. Given
 that the RFC is completely different, he decides to restart the clock and
@@ -251,13 +251,13 @@ rustbot also pings the relevant team members:</p>
 <p>Hello! @Alan has proposed to merge this. This is a <strong>reversible decision</strong>,
 which means that it will be affirmed once the &quot;final comment period&quot; of 10
 days have passed, unless a team member places a &quot;hold&quot; on the decision (or cancels it).</p>
-<table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
 <tr><td>@Alan</td><td><strong>merge</strong></td></tr>
 <tr><td>@Barbara</td><td><del>merge</del></td></tr>
 <tr><td>@Grace</td><td></td></tr>
 <tr><td>@Niklaus</td><td><del>hold</del></td></tr>
 </tbody></table>
-</blockquote>
+</div></blockquote>
 <p>Barbara can use <code>@rustbot merge</code> to re-affirm her <strong>merge</strong> status, and Niklaus
 can use <code>@rustbot merge</code> to set his own status to <strong>merge</strong> since he agrees
 with the resolution of his concern.</p>
@@ -274,13 +274,13 @@ adverse effect on the ecosystem...</p>
 <p>Hello! @Alan has proposed to merge this. This is a <strong>reversible decision</strong>,
 which means that it will be affirmed once the &quot;final comment period&quot; of 10
 days have passed, unless a team member places a &quot;hold&quot; on the decision (or cancels it).</p>
-<table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
 <tr><td>@Alan</td><td><strong>merge</strong></td></tr>
 <tr><td>@Barbara</td><td><del>merge</del> <strong>merge</strong></td></tr>
 <tr><td>@Grace</td><td><strong>hold</strong></td></tr>
 <tr><td>@Niklaus</td><td><del>hold</del> <strong>merge</strong></td></tr>
 </tbody></table>
-</blockquote>
+</div></blockquote>
 <p>Niklaus reads this message. He feels he understands the concern well, and
 agrees that this point hasn't yet been considered:</p>
 <blockquote>
@@ -315,13 +315,13 @@ move forward:</p>
 <p>Hello! @Alan has proposed to merge this. This is a <strong>reversible decision</strong>,
 which means that it will be affirmed once the &quot;final comment period&quot; of 10
 days have passed, unless a team member places a &quot;hold&quot; on the decision (or cancels it).</p>
-<table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
 <tr><td>@Alan</td><td><strong>merge</strong></td></tr>
 <tr><td>@Barbara</td><td><del>merge</del> <strong>merge</strong></td></tr>
 <tr><td>@Grace</td><td><strong>hold</strong></td></tr>
 <tr><td>@Niklaus</td><td><del>hold</del> <del>merge</del> <del>hold</del> <strong>merge</strong></td></tr>
 </tbody></table>
-</blockquote>
+</div></blockquote>
 <p>(We'll assume, for this example, that Grace does not manage to convince anyone
 else.)</p>
 <p>Grace takes some time, working with the RFC author, to add a dissent, including
@@ -333,13 +333,13 @@ her behalf.) The status now looks like this:</p>
 <p>Hello! @Alan has proposed to merge this. This is a <strong>reversible decision</strong>,
 which means that it will be affirmed once the &quot;final comment period&quot; of 10
 days have passed, unless a team member places a &quot;hold&quot; on the decision (or cancels it).</p>
-<table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
 <tr><td>@Alan</td><td><strong>merge</strong></td></tr>
 <tr><td>@Barbara</td><td><del>merge</del> <strong>merge</strong></td></tr>
 <tr><td>@Grace</td><td><del>hold</del> <strong>dissent</strong></td></tr>
 <tr><td>@Niklaus</td><td><del>hold</del> <del>merge</del> <del>hold</del> <strong>merge</strong></td></tr>
 </tbody></table>
-</blockquote>
+</div></blockquote>
 <p>Since all statuses are now either <strong>merge</strong> or <strong>dissent</strong> rustbot also posts a
 comment:</p>
 <blockquote>
@@ -359,13 +359,13 @@ template is a bit different:</p>
 <p>Hello! @Alan has proposed to stabilize this. This is a <strong>irreversible
 decision</strong>, which means that it will be affirmed once all members come to a
 consensus and the &quot;final comment period&quot; of 10 days has passed.</p>
-<table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Team member</th><th>State</th></tr></thead><tbody>
 <tr><td>@Alan</td><td>stabilize</td></tr>
 <tr><td>@Barbara</td><td></td></tr>
 <tr><td>@Grace</td><td></td></tr>
 <tr><td>@Niklaus</td><td></td></tr>
 </tbody></table>
-</blockquote>
+</div></blockquote>
 <p>This time, Barbara, Grace, and Niklaus must all explicitly provide a status
 before the decision can proceed. One by one, they join the PR. They must
 individually set their state using one of the rustbot commands.</p>

@@ -141,8 +141,7 @@
 <h2 id="observations"><a class="header" href="#observations">Observations</a></h2>
 <h3 id="any-attempt-to-make-drop-run-more-eagerly-will-have-to-take-borrows-into-account"><a class="header" href="#any-attempt-to-make-drop-run-more-eagerly-will-have-to-take-borrows-into-account">Any attempt to make drop run more eagerly will have to take borrows into account</a></h3>
 <p>The original proposal was to use &quot;CFG dead&quot; as a criteria, but it's pretty clear that this will not work well. Example:</p>
-<pre><pre class="playground"><code class="language-rust=">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust="><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>{
     let x = String::new();
@@ -173,8 +172,7 @@
 <li><code>let _guard = foo()</code> -- moves <code>foo()</code> into <code>_guard</code> and drops at the end of the block</li>
 </ul>
 <p>Another common source of confusion is the lifetimes of temporaries in <code>match</code> statements and the like:</p>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>match foo.lock().data.copy_out() {
     ...

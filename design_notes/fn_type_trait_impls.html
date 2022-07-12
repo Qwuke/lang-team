@@ -200,8 +200,7 @@ code. These have been discussed at length in the following places.</p>
 <p>In this example, we are building a crate which provies a safe wrapper around
 an underlying C API. The C API contains at least one function which accepts
 a function pointer to be used as a callback:</p>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>mod c_api {
     extern {
@@ -218,8 +217,7 @@ the C API, by wrapping it in a call to <code>catch_unwind</code>. Unfortunately,
 offers no way to pass an additional &quot;custom data&quot; field that we could use to
 store the original function pointer.</p>
 <p>Instead, we could write a generic function like this:</p>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>use std::{panic, process};
 
@@ -254,8 +252,7 @@ fn main() {
 <h2 id="implementing-the-default-trait"><a class="header" href="#implementing-the-default-trait">Implementing the <code>Default</code> trait</a></h2>
 <p>The solution initially proposed was to implement <code>Default</code> for function types
 without upvars. Safe trampolines would be written like so:</p>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>fn add_one_adapter&lt;F: Fn(i32) + Default&gt;(arg: i32) {
     let f = F::default();
@@ -268,8 +265,7 @@ without upvars. Safe trampolines would be written like so:</p>
 <p>Unlike <code>Clone</code>, it intuitively does not make sense for a closure to implement
 <code>Default</code> just because its upvars are themselves <code>Default</code>. A closure like
 the following might not expect to ever observe an ID of zero:</p>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>fn do_thing() -&gt; impl FnOnce() {
     let id: i32 = generate_id();
@@ -415,8 +411,7 @@ to the <code>FnStatic::call_static</code> function, which makes this very elegan
 <h3 id="example-1"><a class="header" href="#example-1">Example</a></h3>
 <p>With this trait, we can implement <code>call_me_back_safely</code> from the prior example
 like this:</p>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>use std::{panic, process};
 
@@ -436,8 +431,7 @@ pub fn call_me_back_safely&lt;F: FnStatic()&gt;(_f: F) {
 <p>Initially proposed by @scalexm, this solution uses the existing implicit
 conversion from function types to function pointers, but in a const-eval
 context:</p>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>fn add_one_adapter&lt;const F: fn(i32)&gt;(arg: i32) {
     F(arg + 1);
